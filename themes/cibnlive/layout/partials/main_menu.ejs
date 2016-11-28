@@ -1,0 +1,11 @@
+<li>
+  <form id="search-form">
+    <input type="text" id="search-query-<%- context %>" class="search-query st-default-search-input">
+  </form>
+</li>
+<li><a href="/" class="nav-link<%- page.path=='index.html' ? ' current' : '' %>">首页</a></li>
+<!--li><a href="/product.html" class="nav-link<%- page.path.match(/product/) ? ' current' : '' %>">产品</a></li-->
+<li><a href="/guide/" class="nav-link<%- page.path.match(/guide/) ? ' current' : '' %>">开发指南</a></li>
+<li><a href="/sdk/" class="nav-link<%- page.path.match(/sdk/) ? ' current' : '' %>">SDK接入</a></li>
+<%- partial('partials/api_dropdown') %>
+<li><a href="/download/" class="nav-link<%- page.path.match(/download/) ? ' current' : '' %>">下载</a></li>

@@ -1,0 +1,57 @@
+<% var isIndex = page.path === 'index.html' %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><%- page.title ? page.title + ' - ' : '' %>CIBN live互动直播开放平台</title>
+        <meta charset="utf-8">
+        <meta name="description" content="<%- theme.site_description %>">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="<%- page.title ? page.title + ' - ' : '' %>CIBN live互动直播开发平台">
+        <meta property="og:description" content="<%- theme.site_description %>">
+        <meta property="og:image" content="https://<%- theme.root_domain %>/images/logo.png">
+
+
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+        <script> window.PAGE_TYPE = "<%- page.type %>" </script>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style=\"display:none;\" id='cnzz_stat_icon_1260862760'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260862760' type='text/javascript'%3E%3C/script%3E"));</script>
+
+        <% if(page.path.match(/product/)) { %>
+            <%- css('css/product') %>
+        <% } else if(isIndex) { %>
+            <%- css('css/index') %>
+        <% } else { %>
+            <%- css('css/page') %>
+        <% } %>
+    </head>
+    <body class="<%- isIndex ? '' : 'docs' -%>">
+        <div id="mobile-bar" <%- isIndex ? 'class="top"' : '' %>>
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <%- partial('partials/header') %>
+        <% if (!isIndex) { %>
+            <div id="main" class="fix-sidebar">
+                <% if (page.blog_index) { %>
+                    <%- partial('partials/blog') %>
+                <% } else { %>
+                    <%- body %>
+                <% } %>
+            </div>
+            <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        <% } else { %>
+            <%- body %>
+        <% } %>
+
+        <script src="/js/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<div class="sidebar">
+  <ul class="main-menu">
+    <%- partial('partials/main_menu', { context: 'sidebar' }) %>
+  </ul>
+</div>
+
+<div id="hero">
+  <div class="inner">
+    <div class="left">
+      <img class="hero-logo" src="images/logo.png">
+    </div><div class="right">
+        <h2 class="vue">CIBN&nbsp;live&nbsp;集成播控平台</h2>
+      <h1>
+        CIBN&nbsp;live<br>集成播控平台
+      </h1>
+      <p>
+        <a class="button" href="/sdk/">开&nbsp;&nbsp;&nbsp;&nbsp;始</a>
+        <a class="button white" href="/download/">下&nbsp;&nbsp;&nbsp;&nbsp;载</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="box">
+  <div class="inner">
+    <h2>平台简介</h2>
+    <p>
+      CIBN Live集成播控平台,是七大牌照方之一的国广东方网 络(北京)有限公司的新媒体互动运营集成播控平台。
+    </p>
+    <p>
+      凭借在直播领域深耕多年,积淀下的专业的跨平台编解码技术,并配以大规模视频内容分发网络、大数据系统等形成了从信号采集、编解码到加密、传输、大规模分发和集成播控、监控报警等全套的技术解决方案,可为用户提供稳定、安全、流畅的直播流媒体播控服务。
+    </p>
+  </div>
+</div>
+
+<div id="highlights">
+  <div class="inner">
+    <h2>平台优势</h2>
+    <div class="point">
+      <h3>通用</h3>
+      <p>采用广电新媒体标准的发布管理,内容播控,媒资管控等设计原 则,可快速对接,扩展,以及定制化开发。 支持行业包括:电 视内容,真人秀场,游戏直播,教育行业等。</p>
+    </div>
+
+    <div class="point">
+      <h3>先进</h3>
+      <p>基于标准之上采用多种互联网先进技术,如H264高清编码, 实时指纹识别,独有的网络加密传输协议,远程多端监控等 技术,可提供安全、稳定、高效的流媒体传输服务。</p>
+    </div>
+
+    <div class="point">
+      <h3>易用</h3>
+      <p>播控及内容库等后台可定制化流程,快速创建和对接,节目源一键开关,操作 简单易学能快速上手。</p>
+    </div>
+
+    <div class="point">
+      <h3>专业</h3>
+      <p>系统采用云端与IDC相结合的混合部署可弹性扩容,灵活扩展既保证安全 性同时保证灵活性,提供多套SDK以及后台API接口支持二次开发。 同时还拥有强大的专业技术团队,7*24小时保驾护航!</p>
+    </div>
+  </div>
+</div>
+
+<div class="box">
+  <div class="inner">
+    <h2>平台特点</h2>
+    <ul>
+      <li>
+        提供可管理,可控制,安全可靠的OTT,TV及移 动端流媒体发布平台,多终端统一发布平台管理 (手机,机顶盒,Pad,PC)。
+      </li>
+      <li>
+        具备即时阻断直播的技术能力,并配备与服务规 模相适应的专业人员,健全信息审核、信息安全管 理、值班巡查、应急处置、技术保障等制度。
+      </li>
+      <li>
+        可以提供高度可视化的数据统计图表资料,可供 随时查询相关数据。
+      </li>
+      <li>
+        部署流媒体服务器,支持HLS、 RTMP等多种标准协议输入及输出, 低延时切片,CDN加速,能够提供大 屏高清码流及小屏标清码流。
+      </li>
+      <li>
+        部署实时播控安全监测系统,对内 容源安全,质量,稳定性等7*24小时 监控。
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="box">
+  <div class="inner">
+    <h2>平台结构</h2>
+    <div class="img-wrapper">
+      <img src="images/structure.png">
+    </div>
+  </div>
+</div>
+
+<div id="sponsors">
+  <div class="inner">
+    <h3>合作案例</h3>
+    <%- partial('partials/sponsors') %>
+    <br>
+    <a class="become-sponsor button white" href="#">Become a Backer</a>
+  </div>
+</div>
+
+<div id="footer">
+  CIBNlive开放平台<br>
+  Copyright &copy;  国广东方网络（北京）有限公司
+</div>
+
+<script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script>
+var topScrolled = false
+window.addEventListener('scroll', function () {
+  if (window.pageYOffset > 165 && !topScrolled) {
+    topScrolled = true
+    document.getElementById('mobile-bar').classList.remove('top')
+  } else if (window.pageYOffset <= 165 && topScrolled) {
+    topScrolled = false
+    document.getElementById('mobile-bar').classList.add('top')
+  }
+})
+</script>

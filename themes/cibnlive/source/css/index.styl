@@ -1,0 +1,238 @@
+@import "_common"
+@import "_header"
+@import "_search"
+@import '_sidebar'
+
+$width = 900px
+$space = 50px
+
+body
+    background-color darken($light, 10%)
+
+#logo
+    span
+        font-size 1.2em
+
+.sidebar
+    display none
+
+#mobile-bar
+    &.top
+        background-color transparent
+        box-shadow none
+        .logo
+            display none
+
+#hero
+    position relative
+    padding $space 40px
+    background-image url(/images/space.jpg)
+    background-position center center
+    background-repeat no-repeat
+    background-size 100% 100%
+    height 70vh
+    .mask
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+        opacity .3
+        background-color #333
+        z-index 1
+    .inner
+        position relative
+        z-index 11
+        max-width $width
+        margin 0 auto
+    .left, .right
+        display inline-block
+        vertical-align top
+    .left
+        width 39%
+    .right
+        width 61%
+    .hero-logo
+        width 215px
+        float right
+        margin-right 60px
+        display none
+    p, h2, h1
+        color #fff
+    p
+        font-size 1.2em
+        text-align justify
+    h1
+        font-weight 300
+        margin 0
+        font-size 3.2em
+    h2
+        font-family $logo-font
+        font-weight 500
+        font-size 2.4em
+        margin 0 0 10px
+        display none
+    .button
+        margin 1em 0
+        font-size 1.05em
+        font-weight 600
+        letter-spacing .1em
+        &:first-child
+            margin-right 1em
+    .social-buttons
+        list-style-type none
+        padding 0
+        li
+            display inline-block
+            vertical-align middle
+            margin-right 15px
+.box
+    background-color #fff
+    padding-bottom 50px
+    .inner
+        max-width $width
+        margin 0 auto
+        text-align center
+    h2
+        color $green
+        margin 0
+        padding .5em 0
+        text-align center
+    p
+        text-indent 2em
+        text-align left
+        font-size 1.1em
+    ul
+        list-style none
+        padding 0 10px
+        margin 0 auto
+        li
+            padding-left 5px
+            border-left 3px solid $green
+            text-align justify
+            margin-bottom 15px
+    .img-wrapper
+        width 80%
+        margin 0 auto
+        img
+            width 100%
+
+#highlights
+    background-color #fff
+    padding-top 50px
+    padding-bottom 50px
+    .point-img
+        width 100px
+        height 100px
+    h2
+        color $green
+        margin 0
+        padding .5em 0
+    .inner
+        max-width $width
+        margin 0 auto
+        text-align center
+    .point
+        width 24%
+        display inline-block
+        vertical-align top
+        box-sizing border-box
+        padding 0 1em
+        h2
+            color $green
+            font-size 1.5em
+            font-weight 400
+            margin 0
+            padding .5em 0
+        h3
+            color $green
+            margin 0
+            padding .5em 0
+        p
+            color $light
+            line-height 1.5em
+            text-align justify
+            margin 0
+
+#sponsors
+    text-align center
+    padding 35px 40px 45px
+    background-color #f6f6f6
+    .inner
+        max-width 700px
+        margin 0px auto
+    h3
+        color #999
+        font-size .9em
+        margin 0 0 10px
+    a
+        margin 20px 15px 0
+        position relative
+    a, img
+        width 100px
+        display inline-block
+        vertical-align middle
+    img
+        transition all .3s ease
+        filter none
+        &:hover
+            filter contrast(30%)
+    a.vip
+        display block
+        margin 30px auto 15px
+        width 200px
+        img
+            width 200px
+    .become-sponsor
+        margin-top 40px
+        font-size .9em
+        font-weight 700
+        width auto
+        background-color transparent
+
+#footer
+    padding $space 0
+    color #fff
+    text-align center
+    a
+        font-weight 700
+        color #fff
+
+
+
+@media screen and (max-width: $width)
+    body
+        -webkit-text-size-adjust none
+        font-size 14px
+    .sidebar
+        display block
+    #header
+        display none
+    #mobile-bar
+        display block
+    #hero
+        height auto
+        padding $space 40px 30px
+        .hero-logo
+            display block
+            float none
+            margin 30px auto 15px
+            width 200px
+        .left, .right
+            text-align center
+            width 100%
+        h1
+            font-size 2em
+        h2
+            display block
+        .button
+            font-size .9em
+    #highlights
+        .point
+            display block
+            margin 0 auto
+            width 300px
+            padding 0 40px 30px
+            &:before
+                content "—"
+                color $green
