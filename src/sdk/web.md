@@ -1,7 +1,7 @@
 ---
 title: web SDK
 type: sdk
-order: 4
+order: 5
 ---
 
 CIBN live云视频直播解决方案，可帮助用户直接使用经过大规模验证的直播流媒体分发服务。用户可通过SDK中简洁的接口快速同自有应用集成，实现web flash播放功能。

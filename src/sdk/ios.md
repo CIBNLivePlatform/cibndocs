@@ -1,7 +1,7 @@
 ---
 title: iOS SDK
 type: sdk
-order: 3
+order: 4
 ---
 
 IOS SDK直接托管在Github上，目前没有托管在Cocospod等类似的第三方平台上（正在进行中...），使用上与Android SDK除了语言上的差别并无二致。

@@ -1,7 +1,7 @@
 ---
 title: Android SDK
 type: sdk
-order: 2
+order: 3
 ---
 
 Android SDK依赖于第三方android lib平台jcenter，依赖部署是非常简单的。凭借这设计良好的接口，在使用上也非常方便。
