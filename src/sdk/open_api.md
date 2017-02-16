@@ -5,8 +5,8 @@ order: 2
 ---
 
 
-签名生成规则："Accesskey + Secretkey + '\n\n' + time"组成字符串，使用sha1加密，再用base64加密。
-（Accesskey和Secretkey在用户个人中心获取，time是传入的时间戳参数。）
+签名生成规则："AccessKey + '\n\n' + time"组成字符串，SecretKey做秘钥用sha1加密，再用base64加密。
+（AccessKey和SecretKey在用户个人中心获取，time是传入的时间戳参数。）
 
 ## 开始直播
 
@@ -23,7 +23,9 @@ order: 2
  * Content-Type: application/json; charset=utf-8
  * AccessKey: {Accesskey和Secretkey在用户个人中心获取}
  * Signature: {用户签名}
- * (签名生成规则："Accesskey + Secretkey + '\n\n' + time"组成字符串，使用sha1加密，再用base64加密   )
+ * (签名生成规则："AccessKey + '\n\n' + time"组成字符串，SecretKey做秘钥用sha1加密，再用base64加密,
+ *  例如：Signature = base64(hmac-sha1(accesskey + "\n\n" + time, SecretKey))
+ * )
  *
  * @param {String} appkey 应用的appkey，开发平台账号登录后可创建生成
  *
@@ -76,7 +78,9 @@ order: 2
  * Content-Type: application/json; charset=utf-8
  * AccessKey: {Accesskey和Secretkey在用户个人中心获取}
  * Signature: {用户签名}
- * (签名生成规则："Accesskey + Secretkey + '\n\n' + time"组成字符串，使用sha1加密，再用base64加密   )
+ * (签名生成规则："AccessKey + '\n\n' + time"组成字符串，SecretKey做秘钥用sha1加密，再用base64加密,
+ *  例如：Signature = base64(hmac-sha1(accesskey + "\n\n" + time, SecretKey))
+ * )
  * 
  * @param {String} appkey 应用的appkey，开发平台账号登录后可创建生成
  *
