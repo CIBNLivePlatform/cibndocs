@@ -151,6 +151,31 @@ order: 3
 | gender      |string| N  |性别|
 
 
+## 直播禁止/恢复
+
+`POST: http://dev.cibnlive.com/api/v1/live/forbidden`
+
+### 请求参数
+
+| 字段      |类型     |必填 |说明|
+|-----------|--------|----|----|
+| appkey    | string | Y  |应用的appkey|
+| streamName| string | Y  |直播流名称|
+| forbidden | boolean | Y  |true为禁播，false为恢复|
+| cause     | string | N  |禁播原因|
+
+
+### 返回数据
+
+如果请求成功，将返回json格式的字符串，包含以下字段：
+
+| 字段       | 类型  |必填|说明|
+|---------  |------|----|----|
+| msg       |string| Y  |结果|
+| ret       |int   | Y  |0是成功，其他是失败|
+| data      |array | Y  |执行结果列表|
+
+
 
 ## 腾讯云混流接口
 
